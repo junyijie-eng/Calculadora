@@ -1,5 +1,6 @@
 import doctest
 ### https://www.pythonguis.com/installation/install-qt-designer-standalone/ ###
+### pyside 6
 
 class Calculos:
 
