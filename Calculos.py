@@ -1,4 +1,5 @@
 import doctest
+### https://www.pythonguis.com/installation/install-qt-designer-standalone/ ###
 
 class Calculos:
 
@@ -9,7 +10,6 @@ class Calculos:
         3
         >>> c.suma(2, 4)
         6
-
 
         :param a:
         :param b:
@@ -23,7 +23,6 @@ class Calculos:
         1
         >>> c.resta(9, 4)
         5
-
         """
         return a - b
 
@@ -45,7 +44,6 @@ class Calculos:
         2.0
         >>> c.division(3, 0)
         'division by zero'
-
         """
         try:
             return a / b
