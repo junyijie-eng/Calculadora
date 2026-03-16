@@ -7,9 +7,15 @@ from Calculadora import Calculadora
 class MockView(QObject):
     btnsuma = Signal()  # Solo suma soportada para el esqueleto
 
+    btnresta = Signal()
+
+    btnmult = Signal()
+
+    btndiv = Signal()
+
     def entrada(self):
         print("MOCK: Presenter solicita entradas. Enviando (10, 5)...")
-        return 10.0, 5.0
+        return 10.0, 5
 
     def salida(self, valor):
         print(f"MOCK: La vista recibió el resultado: {valor}")
@@ -31,3 +37,9 @@ if __name__ == "__main__":
     # Simulamos que el usuario pulsó el botón de suma en la GUI
     print("Simulando click en botón suma...")
     vista_falsa.btnsuma.emit()
+    print("Simulando click en botón resta...")
+    vista_falsa.btnresta.emit()
+    print("Simulando click en botón mult...")
+    vista_falsa.btnmult.emit()
+    print("Simulando click en botón div...")
+    vista_falsa.btndiv.emit()
