@@ -11,6 +11,9 @@ class Pantalla(QtWidgets.QMainWindow, form_class):
     # Definición de señales para el Presenter [14], [15]
     # TODO: El estudiante debe definir btnresta, btnmulti y btndivi
     btnsuma = QtCore.Signal()
+    btnresta = QtCore.Signal()
+    btnmult = QtCore.Signal()
+    btndiv = QtCore.Signal()
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -34,12 +37,23 @@ class Pantalla(QtWidgets.QMainWindow, form_class):
         boton = self.sender()
         if boton.text() == '+':
             self.btnsuma.emit()
-
+        if boton.text() == '-':
+            self.btnresta.emit()
+        if boton.text() == '*':
+            self.btnmult.emit()
+        if boton.text() == '/':
+            self.btndiv.emit()
     def verifica(self):
         """Identifica el botón y emite la señal correspondiente."""
         boton = self.sender()
         if boton.text() == '+':
             self.btnsuma.emit()
+        if boton.text() == '-':
+            self.btnresta.emit()
+        if boton.text() == '*':
+            self.btnmult.emit()
+        if boton.text() == '/':
+            self.btndiv.emit()
 
 
         # TODO: Implementar lógica para '-', '*' y '/'

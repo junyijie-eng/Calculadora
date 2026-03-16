@@ -25,6 +25,31 @@ class MockPresenter:
         print("MOCK: Ordenando a la vista mostrar el resultado de prueba '99.999'...")
         self.view.salida(99.999)
 
+    def al_recibir_resta(self):
+        """Este método se ejecuta cuando la Vista emite la señal btnsuma"""
+        print("\n[OK] MOCK: El Presenter ha recibido la señal de RESTA desde la interfaz.")
+
+        # Para probar el flujo completo, el Mock puede "ordenar" a la vista
+        # que muestre un valor ficticio [7]
+        print("MOCK: Ordenando a la vista mostrar el resultado de prueba '9.9'...")
+        self.view.salida(9.9)
+    def al_recibir_mult(self):
+        """Este método se ejecuta cuando la Vista emite la señal btnsuma"""
+        print("\n[OK] MOCK: El Presenter ha recibido la señal de MULT desde la interfaz.")
+
+        # Para probar el flujo completo, el Mock puede "ordenar" a la vista
+        # que muestre un valor ficticio [7]
+        print("MOCK: Ordenando a la vista mostrar el resultado de prueba '6.6'...")
+        self.view.salida(6.6)
+    def al_recibir_div(self):
+        """Este método se ejecuta cuando la Vista emite la señal btnsuma"""
+        print("\n[OK] MOCK: El Presenter ha recibido la señal de SUMA desde la interfaz.")
+
+        # Para probar el flujo completo, el Mock puede "ordenar" a la vista
+        # que muestre un valor ficticio [7]
+        print("MOCK: Ordenando a la vista mostrar el resultado de prueba '66.66'...")
+        self.view.salida(66.66)
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
