@@ -34,6 +34,14 @@ class Pantalla(QtWidgets.QMainWindow, form_class):
         boton = self.sender()
         if boton.text() == '+':
             self.btnsuma.emit()
+
+    def verifica(self):
+        """Identifica el botón y emite la señal correspondiente."""
+        boton = self.sender()
+        if boton.text() == '+':
+            self.btnsuma.emit()
+
+
         # TODO: Implementar lógica para '-', '*' y '/'
 
 
