@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Calculadora</class>
+ <class>PantallaCalculadora</class>
  <widget class="QMainWindow" name="Calculadora">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>385</width>
-    <height>170</height>
+    <width>384</width>
+    <height>173</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -297,5 +297,122 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>entrada1</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>verifica()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>48</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>19</x>
+     <y>34</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>entrada2</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>verifica()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>123</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>17</x>
+     <y>17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btsuma</sender>
+   <signal>clicked()</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>opera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>79</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>328</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btmulti</sender>
+   <signal>clicked()</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>opera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>337</x>
+     <y>85</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>379</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btresta</sender>
+   <signal>clicked()</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>opera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>10</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btdivi</sender>
+   <signal>clicked()</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>opera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>375</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btsalida</sender>
+   <signal>clicked()</signal>
+   <receiver>PantallaCalculadora</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>228</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>verifica()</slot>
+  <slot>opera()</slot>
+ </slots>
 </ui>
